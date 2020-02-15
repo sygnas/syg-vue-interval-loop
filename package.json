@@ -1,0 +1,64 @@
+{
+  "name": "@sygnas/vue-interval-loop",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "author": "Hiroshi Fukuda <info.sygnas@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sygnas/syg-vue-interval-loop.git"
+  },
+  "keywords": [
+    "vue",
+    "loop",
+    "count"
+  ],
+
+  "main": "dist/vue-interval-loop.ssr.js",
+  "browser": "dist/vue-interval-loop.esm.js",
+  "module": "dist/vue-interval-loop.esm.js",
+  "unpkg": "dist/vue-interval-loop.min.js",
+
+  "files": [
+    "dist/*",
+    "src/**/*.vue",
+    "!src/serve-dev.*"
+  ],
+
+  "scripts": {
+    "demo": "vue-cli-service serve demo/demo.js",
+    "serve": "vue-cli-service serve src/serve-dev.js",
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+  },
+
+  "dependencies": {
+  },
+
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@rollup/plugin-alias": "^2.2.0",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-replace": "^2.2.1",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "cross-env": "^6.0.3",
+    "minimist": "^1.2.0",
+    "rollup": "^1.27.13",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.1.3",
+    "rollup-plugin-vue": "^5.1.5",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
